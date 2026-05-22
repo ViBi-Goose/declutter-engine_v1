@@ -1,0 +1,627 @@
+[
+  {
+    "rule_id": 1,
+    "conditions": [
+      { "question": 47, "equals": "yes" }
+    ],
+    "outcome": "H",
+    "priority": 1,
+    "notes": "Hazardous waste overrides all other logic."
+  },
+  {
+    "rule_id": 2,
+    "conditions": [
+      { "question": 50, "equals": "no" }
+    ],
+    "outcome": "J",
+    "priority": 1,
+    "notes": "If the item is not yours, return to owner."
+  },
+  {
+    "rule_id": 3,
+    "conditions": [
+      { "question": 46, "equals": "yes" }
+    ],
+    "outcome": "C",
+    "priority": 1,
+    "notes": "Sensitive personal information must be destroyed or securely wiped."
+  },
+  {
+    "rule_id": 4,
+    "conditions": [
+      { "question": 82, "equals": "yes" }
+    ],
+    "outcome": "H",
+    "priority": 1,
+    "notes": "If the item is a hazard to pets, kids, or people, it must be removed immediately."
+  },
+  {
+    "rule_id": 5,
+    "conditions": [
+      { "question": 80, "equals": "yes" }
+    ],
+    "outcome": "H",
+    "priority": 1,
+    "notes": "Unsafe damage triggers hazardous waste or safe disposal."
+  },
+  {
+    "rule_id": 6,
+    "conditions": [
+      { "question": 79, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 1,
+    "notes": "Expired, spoiled, or past-safe-use items must be discarded."
+  }
+    ,
+  {
+    "rule_id": 7,
+    "conditions": [
+      { "question": 78, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "Visibly dirty, moldy, stained, or unhygienic items should be discarded."
+  },
+  {
+    "rule_id": 8,
+    "conditions": [
+      { "question": 74, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "If the item is not safe, sanitary, or in good enough condition to keep, discard."
+  },
+  {
+    "rule_id": 9,
+    "conditions": [
+      { "question": 77, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "If the item is in a condition where you don't want to use it, release it."
+  },
+  {
+    "rule_id": 10,
+    "conditions": [
+      { "question": 81, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "If you wouldn't give it to someone you care about, it shouldn't stay."
+  },
+  {
+    "rule_id": 11,
+    "conditions": [
+      { "question": 83, "equals": "yes" }
+    ],
+    "outcome": "H",
+    "priority": 2,
+    "notes": "Sharp edges, frayed cords, or safety risks require hazardous waste or safe disposal."
+  },
+  {
+    "rule_id": 12,
+    "conditions": [
+      { "question": 84, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "If the item is so worn out you avoid using it, discard it."
+  },
+  {
+    "rule_id": 13,
+    "conditions": [
+      { "question": 73, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 2,
+    "notes": "If you cannot use the product before expiration/end-of-life, release it."
+  },
+  {
+    "rule_id": 14,
+    "conditions": [
+      { "question": 85, "equals": "no" }
+    ],
+    "outcome": "G",
+    "priority": 2,
+    "notes": "Living things that are 'just surviving' should be ethically rehomed."
+  }
+  ,
+  {
+    "rule_id": 15,
+    "conditions": [
+      { "question": 45, "equals": "yes" }
+    ],
+    "outcome": "B",
+    "priority": 3,
+    "notes": "Official documents that must be legally retained should be kept or digitized + kept."
+  },
+  {
+    "rule_id": 16,
+    "conditions": [
+      { "question": 48, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 3,
+    "notes": "Items donation centers do not accept should be trashed or recycled."
+  },
+  {
+    "rule_id": 17,
+    "conditions": [
+      { "question": 49, "equals": "yes" }
+    ],
+    "outcome": "E",
+    "priority": 3,
+    "notes": "If throwing the item in regular trash is unsafe, illegal, or harmful, recycle or dispose properly."
+  },
+  {
+    "rule_id": 18,
+    "conditions": [
+      { "question": 44, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 3,
+    "notes": "If the item cannot realistically be used or wanted by a donation center, do not donate."
+  },
+  {
+    "rule_id": 19,
+    "conditions": [
+      { "question": 51, "equals": "yes" }
+    ],
+    "outcome": "G",
+    "priority": 3,
+    "notes": "If you cannot or do not want to keep caring for something, rehome it responsibly."
+  }
+  ,
+  {
+    "rule_id": 20,
+    "conditions": [
+      { "question": 2, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Guilt-based keeping triggers journaling/processing."
+  },
+  {
+    "rule_id": 21,
+    "conditions": [
+      { "question": 23, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Avoidance of feelings indicates emotional processing needed."
+  },
+  {
+    "rule_id": 22,
+    "conditions": [
+      { "question": 14, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Fear, anxiety, or emotional discomfort signals a need for reflection."
+  },
+  {
+    "rule_id": 23,
+    "conditions": [
+      { "question": 9, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Sentimental meaning triggers journaling unless digitization is possible."
+  },
+  {
+    "rule_id": 24,
+    "conditions": [
+      { "question": 12, "equals": "yes" }
+    ],
+    "outcome": "K",
+    "priority": 4,
+    "notes": "If meaning can be preserved digitally, digitize then release."
+  },
+  {
+    "rule_id": 25,
+    "conditions": [
+      { "question": 11, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Multiple items representing the same memory triggers consolidation reflection."
+  },
+  {
+    "rule_id": 26,
+    "conditions": [
+      { "question": 24, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Item tied to an outdated or aspirational identity requires emotional processing."
+  },
+  {
+    "rule_id": 27,
+    "conditions": [
+      { "question": 1, "equals": "no" },
+      { "question": 15, "equals": "no" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "If you wouldn't notice it missing AND nothing important would change, emotional detour recommended."
+  },
+  {
+    "rule_id": 28,
+    "conditions": [
+      { "question": 19, "equals": "no" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Lack of joy triggers reflection before practical logic."
+  },
+  {
+    "rule_id": 29,
+    "conditions": [
+      { "question": 3, "equals": "no" },
+      { "question": 8, "equals": "no" },
+      { "question": 20, "equals": "no" }
+    ],
+    "outcome": "A",
+    "priority": 4,
+    "notes": "Future misalignment triggers journaling to clarify identity and direction."
+  }
+  ,
+  {
+    "rule_id": 30,
+    "conditions": [
+      { "question": 57, "equals": "yes" }
+    ],
+    "outcome": "B",
+    "priority": 5,
+    "notes": "Regular or predictable use indicates the item should be kept."
+  },
+  {
+    "rule_id": 31,
+    "conditions": [
+      { "question": 63, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If the item is not genuinely useful, release it."
+  },
+  {
+    "rule_id": 32,
+    "conditions": [
+      { "question": 54, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If the item does not serve a meaningful purpose right now, release it unless sentimental logic applies."
+  },
+  {
+    "rule_id": 33,
+    "conditions": [
+      { "question": 62, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If the item has not been used or added value in the past year, release it unless future use is high."
+  },
+  {
+    "rule_id": 34,
+    "conditions": [
+      { "question": 64, "equals": "no" },
+      { "question": 65, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If there is no realistic use in the next 3 or 12 months, release it."
+  },
+  {
+    "rule_id": 35,
+    "conditions": [
+      { "question": 55, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If you do not want the item, release it unless it is necessary or sentimental."
+  },
+  {
+    "rule_id": 36,
+    "conditions": [
+      { "question": 56, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If you do not need the item, release it unless it is regularly used or emotionally meaningful."
+  },
+  {
+    "rule_id": 37,
+    "conditions": [
+      { "question": 68, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If you already own something that does the same job better, release this item."
+  },
+  {
+    "rule_id": 38,
+    "conditions": [
+      { "question": 69, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If this is not the item you reach for when you need its function, release it."
+  },
+  {
+    "rule_id": 39,
+    "conditions": [
+      { "question": 52, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If you avoid using the item because it is inconvenient or high-effort, release it."
+  },
+  {
+    "rule_id": 40,
+    "conditions": [
+      { "question": 70, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If the item is not easy to use, release it."
+  },
+  {
+    "rule_id": 41,
+    "conditions": [
+      { "question": 71, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If the item is uncomfortable or unpleasant to use, release it."
+  },
+  {
+    "rule_id": 42,
+    "conditions": [
+      { "question": 66, "equals": "no" }
+    ],
+    "outcome": "L",
+    "priority": 5,
+    "notes": "If the item does not work as intended, repair or upcycle it."
+  },
+  {
+    "rule_id": 43,
+    "conditions": [
+      { "question": 67, "equals": "no" }
+    ],
+    "outcome": "L",
+    "priority": 5,
+    "notes": "If the item is missing parts or accessories, repair or complete it."
+  },
+  {
+    "rule_id": 44,
+    "conditions": [
+      { "question": 60, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 5,
+    "notes": "Duplicates trigger a reflection path to choose the best and release the rest."
+  },
+  {
+    "rule_id": 45,
+    "conditions": [
+      { "question": 59, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 5,
+    "notes": "If you would not buy this again today, release it."
+  },
+  {
+    "rule_id": 46,
+    "conditions": [
+      { "question": 72, "equals": "yes" }
+    ],
+    "outcome": "K",
+    "priority": 5,
+    "notes": "If a digital version exists that serves the same purpose, digitize then release."
+  }
+    ,
+  {
+    "rule_id": 47,
+    "conditions": [
+      { "question": 87, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item is not worth packing, moving, and unpacking, release it."
+  },
+  {
+    "rule_id": 48,
+    "conditions": [
+      { "question": 86, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the value does not justify the space it occupies, release it."
+  },
+  {
+    "rule_id": 49,
+    "conditions": [
+      { "question": 89, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If you do not have a clear, specific place to store this in your home, release it."
+  },
+  {
+    "rule_id": 50,
+    "conditions": [
+      { "question": 90, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item will not fit comfortably without crowding or overflow, release it."
+  },
+  {
+    "rule_id": 51,
+    "conditions": [
+      { "question": 92, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If keeping this forces something else you value to lose space, release it."
+  },
+  {
+    "rule_id": 52,
+    "conditions": [
+      { "question": 93, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item tends to migrate into clutter piles, release it."
+  },
+  {
+    "rule_id": 53,
+    "conditions": [
+      { "question": 94, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item is awkwardly shaped or bulky in a way that makes storage difficult, release it."
+  },
+  {
+    "rule_id": 54,
+    "conditions": [
+      { "question": 91, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item is too heavy or large to move reasonably, release it."
+  },
+  {
+    "rule_id": 55,
+    "conditions": [
+      { "question": 95, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item is not suited to the climate, lifestyle, or space of your home, release it."
+  },
+  {
+    "rule_id": 56,
+    "conditions": [
+      { "question": 96, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 6,
+    "notes": "If the item requires special storage you cannot realistically maintain, release it."
+  },
+  {
+    "rule_id": 57,
+    "conditions": [
+      { "question": 88, "equals": "yes" }
+    ],
+    "outcome": "K",
+    "priority": 6,
+    "notes": "If the item can be digitized, downsized, or simplified, digitize then release."
+  }
+    ,
+  {
+    "rule_id": 58,
+    "conditions": [
+      { "question": 99, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If the item is not worth the time, space, or energy it demands, release it."
+  },
+  {
+    "rule_id": 59,
+    "conditions": [
+      { "question": 100, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If you would not carry this item for 3 miles in the rain, it is not worth keeping."
+  },
+  {
+    "rule_id": 60,
+    "conditions": [
+      { "question": 101, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If you would not grab this in a fire, it is not a priority item."
+  },
+  {
+    "rule_id": 61,
+    "conditions": [
+      { "question": 102, "equals": "yes" },
+      { "question": 103, "equals": "no" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If the item requires maintenance and you are not willing to do it, release it."
+  },
+  {
+    "rule_id": 62,
+    "conditions": [
+      { "question": 106, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If the item creates more chores than it saves, release it."
+  },
+  {
+    "rule_id": 63,
+    "conditions": [
+      { "question": 105, "equals": "yes" }
+    ],
+    "outcome": "D",
+    "priority": 7,
+    "notes": "If keeping the item adds to your mental load, release it."
+  },
+  {
+    "rule_id": 64,
+    "conditions": [
+      { "question": 104, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 7,
+    "notes": "Project stagnation triggers reflection or journaling."
+  },
+  {
+    "rule_id": 65,
+    "conditions": [
+      { "question": 107, "equals": "yes" }
+    ],
+    "outcome": "A",
+    "priority": 7,
+    "notes": "Avoidance loops indicate emotional or logistical friction; reflection recommended."
+  },
+  {
+    "rule_id": 66,
+    "conditions": [
+      { "question": 97, "equals": "yes" }
+    ],
+    "outcome": "L",
+    "priority": 7,
+    "notes": "If the item’s life can be responsibly extended, repair or upcycle it."
+  },
+  {
+    "rule_id": 67,
+    "conditions": [
+      { "question": 98, "equals": "yes" }
+    ],
+    "outcome": "L",
+    "priority": 7,
+    "notes": "If the item can be repurposed or upcycled, choose transformation over disposal."
+  }
+    ,
+  {
+    "rule_id": 68,
+    "conditions": [],
+    "outcome": "B",
+    "priority": 10,
+    "notes": "Fallback rule: if no other rule triggers, keep the item."
+  }
+]
+
+
+
