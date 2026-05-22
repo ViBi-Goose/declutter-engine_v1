@@ -1,0 +1,86 @@
+[
+  {
+    "id": "A",
+    "label": "Journal / Reflect",
+    "category": "Deliberative",
+    "description": "The item triggers emotional conflict, avoidance, guilt, fear, or unresolved meaning. Pause and process before deciding.",
+    "notes": "Attach journaling prompts or emotional processing resources here."
+  },
+  {
+    "id": "B",
+    "label": "Keep",
+    "category": "Keeping",
+    "description": "The item is meaningful, useful, aligned with your future, or essential to your life.",
+    "notes": "In moving mode, this becomes 'Pack'."
+  },
+  {
+    "id": "C",
+    "label": "Destroy / Shred",
+    "category": "Releasing",
+    "description": "The item contains sensitive personal information or must be securely destroyed.",
+    "notes": "Add shredding/wiping guidelines here."
+  },
+  {
+    "id": "D",
+    "label": "Trash",
+    "category": "Releasing",
+    "description": "The item is unusable, unsafe, unsanitary, broken beyond repair, or non‑donatable.",
+    "notes": "General waste disposal."
+  },
+  {
+    "id": "E",
+    "label": "Recycle",
+    "category": "Releasing",
+    "description": "The item is recyclable and not suitable for donation or reuse.",
+    "notes": "Add local recycling guidelines here."
+  },
+  {
+    "id": "F",
+    "label": "Donate",
+    "category": "Releasing",
+    "description": "The item is in good condition and can be used by someone else.",
+    "notes": "Add donation center guidelines here."
+  },
+  {
+    "id": "G",
+    "label": "Rehome",
+    "category": "Releasing",
+    "description": "The item is a living thing or something requiring ongoing care that you cannot provide.",
+    "notes": "Ethical rehoming resources go here."
+  },
+  {
+    "id": "H",
+    "label": "Hazardous Waste",
+    "category": "Releasing",
+    "description": "The item is hazardous (batteries, chemicals, sharps, electronics) and must be disposed of safely.",
+    "notes": "Add hazardous waste disposal info here."
+  },
+  {
+    "id": "I",
+    "label": "Sell",
+    "category": "Releasing",
+    "description": "The item has resale value and is worth the time and effort to list.",
+    "notes": "Add selling platforms or tips here."
+  },
+  {
+    "id": "J",
+    "label": "Return to Owner",
+    "category": "Releasing",
+    "description": "The item does not belong to you and must be returned or ownership clarified.",
+    "notes": "Outcome for Q50."
+  },
+  {
+    "id": "K",
+    "label": "Digitize, Then Release",
+    "category": "Transforming",
+    "description": "The meaning can be preserved digitally without keeping the physical item.",
+    "notes": "Add digitization tools or instructions here."
+  },
+  {
+    "id": "L",
+    "label": "Repair / Upcycle",
+    "category": "Transforming",
+    "description": "The item can be repaired, repurposed, or upcycled instead of discarded.",
+    "notes": "Add repair resources or upcycling ideas here."
+  }
+]
