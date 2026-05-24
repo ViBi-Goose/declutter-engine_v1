@@ -47,62 +47,82 @@
   <div id="result" style="display:none;"></div>
 
   <script src="engine.js"></script>
-  <script>
-    let currentIndex = 0;
-    let answers = {};
+<script>
+  let currentIndex = 0;
+  let answers = {};
 
-    async function start() {
-      await window.declutterEngine.initEngine();
-      showQuestion();
-    }
-
-    function showQuestion() {
-  const q = QUESTIONS[currentIndex];
-  if (!q) {
-    finish();
-    return;
+  async function start() {
+    await window.declutterEngine.initEngine();
+    showQuestion();
   }
 
-  document.getElementById('question-text').textContent = q.text;
-  document.getElementById('question-box').style.display = 'block';
-}
-
-
-    function answer(value) {
-  const q = QUESTIONS[currentIndex];
-  answers[String(q.id)] = value;
-  currentIndex++;
-  showQuestion();
-}
-
-
-    function finish() {
-      const result = window.declutterEngine.evaluateAnswers(answers);
-
-      const box = document.getElementById('result');
-      box.style.display = 'block';
-
-      if (!result) {
-        box.innerHTML = `<h2>No outcome found.</h2>`;
-        return;
-      }
-
-      const { outcome, matchedRule } = result;
-
-      box.innerHTML = `
-        <h2>Outcome: ${outcome.label}</h2>
-        <p><strong>Category:</strong> ${outcome.category}</p>
-        <p><strong>Description:</strong> ${outcome.description}</p>
-        <hr>
-        <p><strong>Matched Rule:</strong> ${matchedRule.rule_id}</p>
-        <p><strong>Rule Notes:</strong> ${matchedRule.notes}</p>
-      `;
-
-      document.getElementById('question-box').style.display = 'none';
+  function showQuestion() {
+    const q = QUESTIONS[currentIndex];
+    if (!q) {
+      finish();
+      return;
     }
 
-    start();
-  </script>
+    document.getElementById('question-text').textContent = q.text;
+    document.getElementById('question-box').style.display = 'block';
+  }
+
+  function answer(value) {
+    const q = QUESTIONS[currentIndex];
+    answers[String(q.id)] = value;
+
+    // EARLY EXIT CHECK
+    const result = window.declutterEngine.evaluateAnswers(answers);
+    if (result && result.matchedRule && result.matchedRule.priority <= 1) {
+      showResult(result.outcome);
+      return;
+    }
+
+    // Otherwise continue
+    currentIndex++;
+    showQuestion();
+  }
+
+  function showResult(outcome) {
+    document.getElementById('question-box').style.display = 'none';
+
+    const box = document.getElementById('result');
+    box.style.display = 'block';
+    box.innerHTML = `
+      <h2>Outcome: ${outcome.label}</h2>
+      <p><strong>Category:</strong> ${outcome.category}</p>
+      <p><strong>Description:</strong> ${outcome.description}</p>
+    `;
+  }
+
+  function finish() {
+    const result = window.declutterEngine.evaluateAnswers(answers);
+
+    const box = document.getElementById('result');
+    box.style.display = 'block';
+
+    if (!result) {
+      box.innerHTML = `<h2>No outcome found.</h2>`;
+      return;
+    }
+
+    const { outcome, matchedRule } = result;
+
+    box.innerHTML = `
+      <h2>Outcome: ${outcome.label}</h2>
+      <p><strong>Category:</strong> ${outcome.category}</p>
+      <p><strong>Description:</strong> ${outcome.description}</p>
+      <hr>
+      <p><strong>Matched Rule:</strong> ${matchedRule.rule_id}</p>
+      <p><strong>Rule Notes:</strong> ${matchedRule.notes}</p>
+    `;
+
+    document.getElementById('question-box').style.display = 'none';
+  }
+
+  start();
+</script>
+
 
 </body>
 </html>
