@@ -57,21 +57,24 @@
     }
 
     function showQuestion() {
-      const q = window.declutterEngine.getQuestionById(currentIndex + 1);
-      if (!q) {
-        finish();
-        return;
-      }
+  const q = QUESTIONS[currentIndex];
+  if (!q) {
+    finish();
+    return;
+  }
 
-      document.getElementById('question-text').textContent = q.text;
-      document.getElementById('question-box').style.display = 'block';
-    }
+  document.getElementById('question-text').textContent = q.text;
+  document.getElementById('question-box').style.display = 'block';
+}
+
 
     function answer(value) {
-      answers[String(currentIndex + 1)] = value;
-      currentIndex++;
-      showQuestion();
-    }
+  const q = QUESTIONS[currentIndex];
+  answers[String(q.id)] = value;
+  currentIndex++;
+  showQuestion();
+}
+
 
     function finish() {
       const result = window.declutterEngine.evaluateAnswers(answers);
