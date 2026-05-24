@@ -1,5 +1,15 @@
 [
   {
+  "rule_id": 0,
+  "conditions": [
+    { "question": 50, "equals": "no" }
+  ],
+  "outcome": "J",
+  "priority": 1,
+  "notes": "If the item is not mine to decide about, stop immediately."
+  },
+
+  {
     "rule_id": 1,
     "conditions": [
       { "question": 47, "equals": "yes" }
