@@ -6,7 +6,7 @@
   ],
   "outcome": "J",
   "priority": 1,
-  "notes": "If the item is not mine to decide about, stop immediately."
+  "notes": "Return this item to its owner or determine ownership before making any decisions about it"
   },
 
   {
