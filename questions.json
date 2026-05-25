@@ -78,7 +78,7 @@
   { "id": 71, "text": "Is this item comfortable or pleasant to use (not painful, awkward, or frustrating)?", "category": "Practical Use & Functionality", "notes": 0 },
   { "id": 72, "text": "Do I already have a digital version of this item that serves the same purpose?", "category": "Practical Use & Functionality", "notes": 0 },
 
-  { "id": 73, "text": "Will I be able to use this product before its expiration/end-of-life date?", "category": "Safety/Hygiene/Condition", "notes": 0 },
+  { "id": 73, "text": "Will I be able and willing to use this product before its expiration/end-of-life date?", "category": "Safety/Hygiene/Condition", "notes": 0 },
   { "id": 74, "text": "Is this item safe, sanitary, and in good enough condition to keep?", "category": "Safety/Hygiene/Condition", "notes": 0 },
   { "id": 75, "text": "Is this item made to last?", "category": "Safety/Hygiene/Condition", "notes": 0 },
   { "id": 76, "text": "Does the item expire or have an end-of-life?", "category": "Safety/Hygiene/Condition", "notes": 0 },
