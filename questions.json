@@ -1,6 +1,18 @@
 [
   { "id": 50, "text": "Is this item actually mine to make decisions about?", "category": "Legal & Ethical", "notes": 0 },
   
+  { "id": 33, "text": "Is this item primarily clothing or an accessory?", "category": "Item Type", "notes": 0 },
+  { "id": 34, "text": "Is this item primarily paperwork, documents, or mail?", "category": "Item Type", "notes": 0 },
+  { "id": 35, "text": "Is this item primarily a tool, appliance, or functional equipment?", "category": "Item Type", "notes": 0 },
+  { "id": 36, "text": "Is this item primarily décor or a decorative object?", "category": "Item Type", "notes": 0 },
+  { "id": 37, "text": "Is this item primarily a hobby, craft, or project supply?", "category": "Item Type", "notes": 0 },
+  { "id": 38, "text": "Is this item primarily a sentimental object or keepsake?", "category": "Item Type", "notes": 0 },
+  { "id": 39, "text": "Is this item primarily a consumable (food, product, supply that gets used up)?", "category": "Item Type", "notes": 0 },
+  { "id": 40, "text": "Is this item primarily electronics or something that stores data?", "category": "Item Type", "notes": 0 },
+  { "id": 41, "text": "Is this item part of a set or collection that only makes sense together?", "category": "Item Type", "notes": 0 },
+  { "id": 42, "text": "Is this item seasonal?", "category": "Item Type", "notes": 0 },
+  { "id": 43, "text": "Is this a living thing (plant, pet, other organism etc.) that depends on me for care?", "category": "Item Type", "notes": 0 },
+  
   { "id": 1, "text": "Would I notice if this were gone?", "category": "Emotional & Sentimental" },
   { "id": 2, "text": "Is this something I am keeping out of guilt or obligation?", "category": "Emotional & Sentimental", "notes": 0 },
   { "id": 3, "text": "Does this item align with my future life?", "category": "Emotional & Sentimental" },
@@ -34,18 +46,6 @@
   { "id": 30, "text": "Is the ongoing cost (maintenance, supplies, storage) of this item worth what I get from it?", "category": "Financial", "notes": 0 },
   { "id": 31, "text": "Is this worth at least $10-$20 and simple enough to sell that it wouldn't become a burden?", "category": "Financial", "notes": 0 },
   { "id": 32, "text": "If I listed this today, is it realistic that someone would actually buy it?", "category": "Financial", "notes": 0 },
-
-  { "id": 33, "text": "Is this item primarily clothing or an accessory?", "category": "Item Type", "notes": 0 },
-  { "id": 34, "text": "Is this item primarily paperwork, documents, or mail?", "category": "Item Type", "notes": 0 },
-  { "id": 35, "text": "Is this item primarily a tool, appliance, or functional equipment?", "category": "Item Type", "notes": 0 },
-  { "id": 36, "text": "Is this item primarily décor or a decorative object?", "category": "Item Type", "notes": 0 },
-  { "id": 37, "text": "Is this item primarily a hobby, craft, or project supply?", "category": "Item Type", "notes": 0 },
-  { "id": 38, "text": "Is this item primarily a sentimental object or keepsake?", "category": "Item Type", "notes": 0 },
-  { "id": 39, "text": "Is this item primarily a consumable (food, product, supply that gets used up)?", "category": "Item Type", "notes": 0 },
-  { "id": 40, "text": "Is this item primarily electronics or something that stores data?", "category": "Item Type", "notes": 0 },
-  { "id": 41, "text": "Is this item part of a set or collection that only makes sense together?", "category": "Item Type", "notes": 0 },
-  { "id": 42, "text": "Is this item seasonal?", "category": "Item Type", "notes": 0 },
-  { "id": 43, "text": "Is this a living thing (plant, pet, other organism etc.) that depends on me for care?", "category": "Item Type", "notes": 0 },
 
   { "id": 44, "text": "If I donate this item, will it realistically be used or wanted?", "category": "Legal & Ethical", "notes": 0 },
   { "id": 45, "text": "Is this an official document I may be legally required to keep (ID, tax, medical, legal)?", "category": "Legal & Ethical", "notes": 0 },
