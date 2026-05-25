@@ -76,6 +76,15 @@
     const qId = window.currentQuestionId;
     answers[String(qId)] = value;
 
+    // Detect item-type branch
+const branch = window.declutterEngine.detectItemTypeBranch(qId, value);
+if (branch && !window.currentBranch) {
+  window.currentBranch = branch;
+  window.branchIndex = 0;
+  showQuestion();
+  return;
+}
+
     // Early exit check (Q50, safety, etc.)
     const result = window.declutterEngine.evaluateAnswers(answers);
     if (result && result.matchedRule && result.matchedRule.priority <= 1) {
