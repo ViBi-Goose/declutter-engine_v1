@@ -623,15 +623,14 @@
     "outcome": "L",
     "priority": 7,
     "notes": "If the item can be repurposed or upcycled, choose transformation over disposal."
-  }
-    ,
+  },
   {
     "rule_id": 68,
     "conditions": [],
     "outcome": "B",
     "priority": 10,
     "notes": "Fallback rule: if no other rule triggers, keep the item."
-  }
+  },
   {
   "rule_id": "consumable_expired_hazardous",
   "priority": 5,
@@ -644,7 +643,6 @@
   "outcome": "H",
   "notes": "Expired hazardous consumable"
 }
-
 ]
 
 
