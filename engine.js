@@ -8,7 +8,40 @@ let QUESTIONS = [];
 let OUTCOMES = [];
 let RULES = [];
 
-// Load all JSON files in parallel
+// Branch placeholders — empty for now
+const BRANCHES = {
+  clothing: [],
+  paperwork: [],
+  tools: [],
+  decor: [],
+  hobby: [],
+  sentimental: [],
+  consumable: [],
+  electronics: [],
+  collection: [],
+  seasonal: [],
+  living: []
+};
+
+// Map item-type question IDs → branch names
+const ITEM_TYPE_ROUTING = {
+  33: "clothing",
+  34: "paperwork",
+  35: "tools",
+  36: "decor",
+  37: "hobby",
+  38: "sentimental",
+  39: "consumable",
+  40: "electronics",
+  41: "collection",
+  42: "seasonal",
+  43: "living"
+};
+
+// Track branch state
+window.currentBranch = null;
+window.branchIndex = 0;
+
 async function loadEngineData() {
   const [questionsRes, outcomesRes, rulesRes] = await Promise.all([
     fetch('questions.json'),
@@ -20,7 +53,6 @@ async function loadEngineData() {
   OUTCOMES = await outcomesRes.json();
   RULES = await rulesRes.json();
 
-  // Sort rules by priority (lowest number = highest priority)
   RULES.sort((a, b) => a.priority - b.priority);
 }
 
@@ -28,33 +60,18 @@ async function loadEngineData() {
 // Core evaluation logic
 // -----------------------------
 
-/**
- * answers: an object like { "1": "yes", "2": "no", ... }
- * returns: { outcome, matchedRule } or null if nothing matched
- */
 function evaluateAnswers(answers) {
   for (const rule of RULES) {
     if (ruleMatches(rule, answers)) {
       const outcome = OUTCOMES.find(o => o.id === rule.outcome) || null;
-      return {
-        outcome,
-        matchedRule: rule
-      };
+      return { outcome, matchedRule: rule };
     }
   }
-
-  // Should never hit this because of fallback rule, but just in case:
   return null;
 }
 
-/**
- * Check if a single rule matches the given answers.
- */
 function ruleMatches(rule, answers) {
-  // Fallback rule: no conditions means always match
-  if (!rule.conditions || rule.conditions.length === 0) {
-    return true;
-  }
+  if (!rule.conditions || rule.conditions.length === 0) return true;
 
   return rule.conditions.every(cond => {
     const qId = String(cond.question);
@@ -65,24 +82,34 @@ function ruleMatches(rule, answers) {
 }
 
 // -----------------------------
-// Helper accessors
+// Branching logic
 // -----------------------------
 
-function getQuestionById(id) {
-  return QUESTIONS.find(q => String(q.id) === String(id)) || null;
+function detectItemTypeBranch(questionId, answerValue) {
+  if (answerValue !== "yes") return null;
+  return ITEM_TYPE_ROUTING[questionId] || null;
 }
 
-function getOutcomeById(id) {
-  return OUTCOMES.find(o => o.id === id) || null;
+function getNextQuestion(currentIndex, answers) {
+  // If we are inside a branch
+  if (window.currentBranch) {
+    const branchQuestions = BRANCHES[window.currentBranch];
+    const nextQ = branchQuestions[window.branchIndex];
+    if (!nextQ) return null; // branch finished
+    window.branchIndex++;
+    return nextQ;
+  }
+
+  // Not in a branch yet — follow QUESTIONS array order
+  const q = QUESTIONS[currentIndex];
+  if (!q) return null;
+
+  return q;
 }
 
 // -----------------------------
-// Example wiring hook (for UI)
+// Engine initialization
 // -----------------------------
-//
-// You’ll call loadEngineData() once on page load,
-// then use evaluateAnswers() when the user finishes a session.
-//
 
 async function initEngine() {
   await loadEngineData();
@@ -93,10 +120,10 @@ async function initEngine() {
   });
 }
 
-// Expose functions to the global scope for now
+// Expose functions
 window.declutterEngine = {
   initEngine,
   evaluateAnswers,
-  getQuestionById,
-  getOutcomeById
+  getNextQuestion,
+  detectItemTypeBranch
 };
