@@ -16,7 +16,7 @@ const BRANCHES = {
   decor: [],
   hobby: [],
   sentimental: [],
-  consumable: [],
+  consumable: [76, 79, 47],
   electronics: [],
   collection: [],
   seasonal: [],
