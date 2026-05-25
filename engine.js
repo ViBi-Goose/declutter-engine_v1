@@ -8,7 +8,7 @@ let QUESTIONS = [];
 let OUTCOMES = [];
 let RULES = [];
 
-// Branch placeholders — empty for now
+// Branch placeholders — now with consumable branch filled
 const BRANCHES = {
   clothing: [],
   paperwork: [],
@@ -94,8 +94,13 @@ function getNextQuestion(currentIndex, answers) {
   // If we are inside a branch
   if (window.currentBranch) {
     const branchQuestions = BRANCHES[window.currentBranch];
-    const nextQ = branchQuestions[window.branchIndex];
-    if (!nextQ) return null; // branch finished
+    const nextId = branchQuestions[window.branchIndex];
+
+    if (!nextId) return null; // branch finished
+
+    // ⭐ FIX: convert ID → full question object
+    const nextQ = QUESTIONS.find(q => q.id === nextId);
+
     window.branchIndex++;
     return nextQ;
   }
