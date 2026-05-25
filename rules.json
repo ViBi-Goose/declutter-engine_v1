@@ -54,15 +54,16 @@
     "priority": 1,
     "notes": "Unsafe damage triggers hazardous waste or safe disposal."
   },
-  {
-    "rule_id": 6,
-    "conditions": [
-      { "question": 79, "equals": "yes" }
-    ],
-    "outcome": "D",
-    "priority": 1,
-    "notes": "Expired, spoiled, or past-safe-use items must be discarded."
-  }
+ {
+  "rule_id": 6,
+  "conditions": [
+    { "question": 79, "equals": "yes" },
+    { "question": 47, "equals": "no" }
+  ],
+  "outcome": "D",
+  "priority": 1,
+  "notes": "Expired, spoiled, or past-safe-use items must be discarded unless hazardous waste logic applies."
+}
     ,
   {
     "rule_id": 7,
