@@ -631,6 +631,19 @@
     "priority": 10,
     "notes": "Fallback rule: if no other rule triggers, keep the item."
   }
+  {
+  "rule_id": "consumable_expired_hazardous",
+  "priority": 5,
+  "conditions": [
+    { "question": 39, "equals": "yes" },
+    { "question": 76, "equals": "yes" },
+    { "question": 79, "equals": "yes" },
+    { "question": 47, "equals": "yes" }
+  ],
+  "outcome": "H",
+  "notes": "Expired hazardous consumable"
+}
+
 ]
 
 
